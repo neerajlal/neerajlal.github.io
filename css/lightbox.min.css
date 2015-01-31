@@ -64,7 +64,7 @@
 	background:url("../images/zoom-hover.png") top right no-repeat;
 }
 .ui-lightbox-loader {
-	background:url("http://themeelite.com/demos/flato/template-1/css/loader.gif") center center no-repeat;
+	background:url("http://themeelite.com/demos/flato/template-3/css/loader.gif") center center no-repeat;
 }
 #ui-lightbox-bottombar {
 	margin-top:5px;
@@ -141,7 +141,7 @@
 	position:fixed;
 }
 #ui-lightbox-error {
-	background:url("http://themeelite.com/demos/flato/template-1/css/error_bg.png") repeat left top;
+	background:url("http://themeelite.com/demos/flato/template-3/css/error_bg.png") repeat left top;
 }
 #ui-lightbox-error-message {
 	color:#fff;
@@ -158,5 +158,5 @@
 	margin-right:15px;
 }
 .ui-lightbox-error-icon-sign {
-	background:url("http://themeelite.com/demos/flato/template-1/css/error_sign.png") no-repeat center 226px;
+	background:url("http://themeelite.com/demos/flato/template-3/css/error_sign.png") no-repeat center 226px;
 }

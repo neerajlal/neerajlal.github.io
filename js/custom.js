@@ -1,39 +1,14 @@
 
 (function($) { 
 	"use strict";
-//For background slider
+	
+	(function($) {
 $(function() {
-			
-	$( '#ri-grid' ).gridrotator( {
-		rows		: 4,
-		columns		: 8,
-		animType	: 'fadeInOut',
-		animSpeed	: 1000,
-		interval	: 600,
-		step		: 1,
-		
-		w1024		: {
-			rows	: 5,
-			columns	: 6
-		},
-		w768		: {
-			rows	: 7,
-			columns	: 4
-		},
-		w480		: {
-			rows	: 4,
-			columns	: 3
-		},
-		w320		: {
-			rows	: 4,
-			columns	: 2
-		},
-		w240		: {
-			rows	: 4,
-			columns	: 2
-		}
-	} );
-
+jQuery('#loopedSlider').prepend("<a href='#' class='previous'>&lt;</a><a href='#' class='next'>&gt;</a>");
+	jQuery('#loopedSlider').loopedSlider({
+		autoHeight: 500
+	});
+});
 });
 
 
@@ -148,4 +123,29 @@ $(window).load(function() {
 });
 
 
+
+
+
+//jQuery
+$(window).load(function() {    
+
+        var theWindow        = $(window),
+            $bg              = $(".bannerImg");
+            //aspectRatio      = $bg.width() / $bg.height();
+
+        function resizeBg() {
+                if ( theWindow.width() < theWindow.height() ) {
+                    $bg
+                        .removeClass()
+                        .addClass('bgheight');
+                } else {
+                    $bg
+                        .removeClass()
+                        .addClass('bgwidth');
+                }
+        }
+
+        theWindow.resize(resizeBg).trigger("resize");
+
+});
 }(jQuery));
