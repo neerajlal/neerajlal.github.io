@@ -3,10 +3,13 @@
 <!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en" data-ng-app="">
+<!--<![endif]-->
+<head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Flato - Responsive Resume, Personal Portfolio Template</title>
+<title>K Neeraj Lal - Profile</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--main style-->
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
@@ -26,7 +29,9 @@
 <!--[if lt IE 9]>
 			<link rel="stylesheet" type="text/css" href="css/fallback.css" />
 		<![endif]-->
-</head><body>
+</head>
+
+<body>
 <!--wrapper start-->
 <div class="wrapper" id="wrapper">
   <header>
@@ -40,8 +45,8 @@
     </div>
     <!--banner end-->
     <div class="bannerText container">
-      <h1>I'm K Neeraj Lal</h1>
-      <h2>Design & Build Beautiful Crafted Web Experiences</h2>
+      <h1>K Neeraj Lal</h1>
+      <h2>I Craft Software Experiences</h2>
     </div>
     <!--menu start-->
     <div class="menu">
@@ -62,6 +67,7 @@
                     <li class="menuItem"><a href="index.html#education">Education</a></li>
                     <li class="menuItem"><a href="index.html#protfolio">Portfolio</a></li>
                     <li class="menuItem"><a href="index.html#contact">Contact</a></li>
+                    <li class="menuItem"><a href="#">Blog</a></li>
                   </ul>
                 </div>
               </div>
@@ -83,164 +89,97 @@
       <div class="row">
         <div class=" col-xs-12 col-sm-12 col-md-7 col-lg-7">
           <h3>K Neeraj Lal</h3>
-          <h4 class="subHeading">Webdesigner & Web Developer from Melbourne</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.  cillum dolore eu fugiat nulla pariatur. olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <p>nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <a href="index.html#" class="bntDownload">Download Printable Resume</a> </div>
-        <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 proPic"> <img src="images/me.jpg" alt="" class="img-circle topmar"> </div>
+          <h4 class="subHeading">Software Developer from India</h4>
+          <p>
+          I am a sofware developer. I am well versed with all the leading sofware development technologies in todays IT market. I have worked on a lot of platforms which includes both Web Platform, Desktop Platforms and Mobile Platforms. I am a coding enthusiast who likes to learn more languages to stay ahead in todays competetive IT market.</p>
+          <p></p>
+          <a href="index.html#" class="bntDownload">Download Printable Resume</a>
+          </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 proPic">
+        <!-- <img src="images/me2.jpg" alt="Sorry, Couldn't Load!" class="img-circle topmar"> -->
+        <img src="images/me.png" alt="Sorry, Couldn't Load!" class="img-circle topmar" height="294px">
+        </div>
       </div>
     </div>
   </section>
   <!--about me end-->
+
   <!--technical start-->
-  <section class="technical" id="technical">
+  <section class="technical" id="technical" data-ng-controller="myController">
     <div class="container">
       <div class="heading">
         <h2>Technical Skills</h2>
         <p>I can say i’m quite good at</p>
       </div>
-      <div class="row">
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="90"> <span class="percent"></span> </span>
-            <h4>Photoshop</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
+      <div class="row" data-ng-init="">
+
+        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea" data-ng-repeat="n in techs">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="{{ n.percent }}"> <span class="percent"></span> </span>
+            <h4>{{ n.name }}</h4>
+            <p>{{ n.description }}</p>
           </div>
         </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="80"> <span class="percent"></span> </span>
-            <h4>Illustrator</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="80"> <span class="percent"></span> </span>
-            <h4>Flash</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="75"> <span class="percent"></span> </span>
-            <h4>HTML5 / CSS3</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="60"> <span class="percent"></span> </span>
-            <h4>jQuery</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="65"> <span class="percent"></span> </span>
-            <h4>PHP / MySQL</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
   <!--technical end-->
+
   <!--exprience start-->
-  <section class="exprience" id="exprience">
-    <div class="container">
+  <section class="exprience" id="exprience" data-ng-controller="myController">
+    <div class="container" data-ng-init="">
       <div class="heading">
         <h2>Work Experience</h2>
         <p>My previous associations</p>
       </div>
-      <div class="row workDetails">
+
+      <div class="row workDetails" data-ng-repeat="n in work">
         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2011<br>
-            Present</div>
+          <div class="workYear">{{ n.from }}<br>
+            {{ n.to }}</div>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
           <div class="arrowpart"></div>
           <div class="exCon">
-            <h4>UIzards</h4>
-            <h5>Senior UX Designer</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+            <h4><a href="{{ n.link }}" class="anchor">{{ n.name }}</a></h4>
+            <h5>{{ n.post }}</h5>
+            <p>{{ n.description }}</p>
           </div>
         </div>
       </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2011<br>
-            Present</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Lexind</h4>
-            <h5>Visual / UI Designer</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2011<br>
-            Present</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Matrix Media</h4>
-            <h5>Visual / UI Designer</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
   <!--exprience end-->
+
   <!--education start-->
-  <section class="education" id="education">
-    <div class="container">
+  <!-- 
+  <section class="education" id="education" data-ng-controller="myController">
+    <div class="container" data-ng-init="">
       <div class="heading">
         <h2>Education & Diplomas</h2>
         <p>What I have done in my academic career</p>
       </div>
-      <div class="row workDetails">
+
+      <div class="row workDetails" data-ng-repeat="n in educ">
         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2010</div>
+          <div class="workYear">{{ n.to }}</div>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
           <div class="arrowpart"></div>
           <div class="exCon">
-            <h4>Master Degree of Design</h4>
-            <h5>University of Design</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+            <h4>{{ n.name }}</h4>
+            <h5>{{ n.university }}</h5>
+            <p>{{ n.description }}</p>
           </div>
         </div>
       </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Sept, 2007</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Bachelor of Arts</h4>
-            <h5>University of Design</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Feb, 2005</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Master Degree of Design</h4>
-            <h5>University of Design</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
+   -->
   <!--education end-->
+
   <!--protfolio start-->
   <section class="protfolio" id="protfolio">
     <div class="container">
@@ -251,33 +190,41 @@
       <div class="portfolioFilter">
         <ul>
           <li><a href="index.html#" data-filter="*" class="current">All</a></li>
-          <li><a href="index.html#" data-filter=".photos">Photos</a></li>
-          <li><a href="index.html#" data-filter=".branding">Branding</a></li>
-          <li><a href="index.html#" data-filter=".illustration">Illustration</a></li>
+          <li><a href="index.html#" data-filter=".photos">Web</a></li>
+          <li><a href="index.html#" data-filter=".branding">Desktop</a></li>
+          <li><a href="index.html#" data-filter=".illustration">Mobile</a></li>
         </ul>
       </div>
       <ul class="portfolioContainer row">
+
         <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-1.jpg" title="Project Title1" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-1.jpg" alt=""  > </div>
+          <div class="lightCon"> <span class="hoverBox"><span class="smallIcon"><a rel="lightbox-demo" href="images/big-1.jpg" title="Project Title1" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-1.jpg" alt=""  > </div>
         </li>
+
         <li class="branding illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
           <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-2.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-2.jpg" alt="" > </div>
         </li>
+
         <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
           <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-3.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-3.jpg" alt="" > </div>
         </li>
+
         <li class="branding illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
           <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-4.jpg" title="Project Title4" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-4.jpg" alt="" > </div>
         </li>
+
         <li class="illustration photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
           <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-5.jpg" title="Project Title5" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-5.jpg" alt="" > </div>
         </li>
+
         <li class="branding photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
           <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-6.jpg" title="Project Title6" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-6.jpg" alt="" > </div>
         </li>
+
         <li class="illustration photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
           <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-7.jpg" title="Project Title7" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-7.jpg" alt="" > </div>
         </li>
+
         <li class="branding col-xs-6 col-sm-4 col-md-3 col-lg-3">
           <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-8.jpg" title="Project Title8" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="index.html#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-8.jpg" alt="" > </div>
         </li>
@@ -285,7 +232,9 @@
     </div>
   </section>
   <!--protfolio end-->
+
   <!--contact start-->
+<!--   
   <section class="contact" id="contact">
     <div class="container topCon">
       <div class="heading">
@@ -297,15 +246,23 @@
       <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&ll=-37.817682,144.957595&spn=0.01134,0.026157&t=m&z=16&output=embed"></iframe>
     </div>
   </section>
+ -->
+
   <section class="contactDetails">
     <div class="container">
+
+      <div class="heading">
+        <h2>Get In Touch</h2>
+        <p>Please feel free if you would like to have a chat.</p>
+      </div>
+
       <!--contact info start-->
       <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
         <h4>Contact details</h4>
-        <p> <i class="fa fa-map-marker fa-lg"></i> Collins Street West Victoria 8007 Australia</p>
-        <p> <i class="fa fa-mobile fa-lg"></i> +1800 1234 56789</p>
-        <p> <i class="fa fa-envelope-o "></i> <a href="mailto:support@websitename.com">support@websitename.com</a></p>
-        <p> <i class="fa fa-link "></i> <a href="http://themeelite.com/demos/flato/template-3/www.websitename.com">www.websitename.com</a></p>
+        <p> <i class="fa fa-map-marker fa-lg"></i> Karipuzha House, Tripunithura, India 682306</p>
+        <p> <i class="fa fa-mobile fa-lg"></i> +91 9496824929</p>
+        <p> <i class="fa fa-envelope-o "></i> <a href="mailto:catchneeraj@hotmail.com">catchneeraj@hotmail.com</a></p>
+        <p> <i class="fa fa-link "></i> <a href="#">neerajlal.github.io</a></p>
       </div>
       <!--contact info end-->
       <!--contact form start-->
@@ -405,5 +362,49 @@ $( ".navbar-toggle" ).click(function() {
 <script src="js/jquery.easypiechart.js"></script>
 <!--contact form js-->
 <script type="text/javascript" src="js/jquery.contact.js"></script>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+
+    <script type="text/javascript">
+      
+      function myController ($scope) {
+        $scope.techs = [
+            {name:'PYTHON', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"40"},
+            {name:'DJANGO', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"60"},
+            {name:'PHP / MYSQL', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"70"},
+            {name:'JAVA', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"50"},
+            {name:'C#', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"50"},
+            {name:'ANDROID', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"70"},
+            {name:'WINDOWS PHONE', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"30"},
+            {name:'HTML5 / CSS3', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"80"},
+            {name:'JQUERY', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"60"},
+            {name:'ANGULAR JS', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"30"},
+            {name:'AMAZON AWS', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"40"},
+            {name:'ARDUINO', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"40"}
+          ];  
+      
+
+      $scope.work = [
+            {
+              name:'Qplay Tech Pvt Ltd',
+              post: 'Senior Software Architect',
+              from:"Sep, 2014",
+              to:"Present",
+              description:"Here I'm in the shoes of Senior Software Architect pioneering this company to heights. I work as a Python/Django Developer. Occationally I also work on the Android platform.",
+              link:"http://qplaytech.com"
+            },
+            {
+              name:'Educkshetra',
+              post: 'Junior Software Developer',
+              from:"Aug, 2012",
+              to:"Aug, 2013",
+              description:"Here I'm in the shoes of Senior Software Architect pioneering this company to heights. I work as a Python/Django Developer. Occationally I also work on the Android platform.",
+              link:"http://educkshetra.com"
+            },
+          ];  
+      }
+    </script>
+
 </body>
+
 </html>
