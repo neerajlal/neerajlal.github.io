@@ -1167,7 +1167,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 
 .footer > div > ul > li > a > i:
 {
-
+	text-decoration: none !important;
 }
 
 
