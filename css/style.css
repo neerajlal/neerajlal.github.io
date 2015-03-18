@@ -1139,7 +1139,6 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 }
 .footer ul li:hover{
 	background:tomato;
-	/*border: 1px solid white;*/
 }
 
 .footer ul li:hover	a{
@@ -1151,26 +1150,12 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	color:tomato;
 	width:42px !important;
 	height:42px !important;
-	border: 1px solid white;
 	text-decoration: none;
 }
 
 .footer ul li a i{
 	line-height:42px !important;
 }
-
-
-.footer a:link,visited,hover,active{
-	text-decoration: none !important;
-}
-
-
-.footer > div > ul > li > a > i:
-{
-	text-decoration: none !important;
-}
-
-
 
 
 	
