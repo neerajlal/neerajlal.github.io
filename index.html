@@ -283,8 +283,8 @@
       <!--contact info start-->
       <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
         <h4>Contact details</h4>
-        <p> <i class="fa fa-map-marker fa-lg" style="display: none;"></i> Karipuzha House, Tripunithura, India 682306</p>
-        <p> <i class="fa fa-mobile fa-lg" style="display: none;"></i> +91 9496824929</p>
+        <p style="display: none;"> <i class="fa fa-map-marker fa-lg"></i> Karipuzha House, Tripunithura, India 682306</p>
+        <p style="display: none;"> <i class="fa fa-mobile fa-lg"></i> +91 9496824929</p>
         <p> <i class="fa fa-envelope-o"></i> <a href="mailto:catchneeraj@hotmail.com">catchneeraj@hotmail.com</a></p>
         <p> <i class="fa fa-link "></i> <a href="#">neerajlal.github.io</a></p>
       </div>
@@ -398,28 +398,31 @@ $( ".navbar-toggle" ).click(function() {
       
       function myController ($scope) {
         $scope.techs = [
-            {name:'PYTHON', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"40"},
-            {name:'DJANGO', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"60"},
-            {name:'PHP / MYSQL', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"70"},
-            {name:'JAVA', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"50"},
-            {name:'C#', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"50"},
-            {name:'ANDROID', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"70"},
-            {name:'WINDOWS PHONE', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"30"},
-            {name:'HTML5 / CSS3', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"80"},
-            {name:'JQUERY', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"60"},
-            {name:'ANGULAR JS', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"30"},
-            {name:'AMAZON AWS', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"40"},
-            {name:'ARDUINO', description:'Donec accumsan ligula vitae mag na curabitur id', percent:"40"}
-          ];  
+            {name:'ANDROID', description:'ANDROID', percent:"80"},
+            {name:'Core JAVA', description:'Core JAVA', percent:"60"},
+            {name:'DJANGO', description:'DJANGO', percent:"40"},
+            {name:'PYTHON', description:'PYTHON', percent:"40"},
+            {name:'PHP / MYSQL', description:'PHP / MYSQL', percent:"40"},
+            {name:'JQUERY', description:'JQUERY', percent:"40"},
+            {name:'AMAZON AWS', description:'AMAZON AWS', percent:"40"},
+            {name:'ARDUINO', description:'ARDUINO', percent:"40"}
+          ]; 
       
-
       $scope.work = [
             {
-              name:'Qplay Tech Pvt Ltd',
-              post: 'Senior Software Architect',
-              from:"Sep, 2014",
+              name:'Geojit Technologies Pvt Ltd',
+              post: 'Software Developer',
+              from:"Jun, 2016",
               to:"Present",
-              description:"Here I'm in the shoes of Senior Software Architect pioneering this company to heights. I work as a Python/Django Developer. Occationally I also work on the Android platform.",
+              description:"Here I'm in the shoes of Software Developer pioneering this company to heights. I work as an Android Developer",
+              link:"http://qplaytech.com"
+            },
+            {
+              name:'Qplay Tech Pvt Ltd',
+              post: 'Software Architect',
+              from:"Sep, 2014",
+              to:"May, 2016",
+              description:"Here I'm in the shoes of Software Architect pioneering this company to heights. I work as a Python/Django Developer. Occationally I also work on the Android platform.",
               link:"http://qplaytech.com"
             },
             {
@@ -427,7 +430,7 @@ $( ".navbar-toggle" ).click(function() {
               post: 'Junior Software Developer',
               from:"Aug, 2012",
               to:"Aug, 2013",
-              description:"Here I'm in the shoes of Senior Software Architect pioneering this company to heights. I work as a Python/Django Developer. Occationally I also work on the Android platform.",
+              description:"Here I'm in the shoes of Junior Software Architect pioneering this company to heights. I work as a Java/Android Developer most of the time.",
               link:"http://educkshetra.com"
             },
           ];  
